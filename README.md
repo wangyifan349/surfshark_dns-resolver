@@ -5,4 +5,4 @@ python3写的,可以将域名*.surfshark.com解析到正确的ip从而解决连�
 
 surfshark is a good VPN, but cannot resolve and connect properly in China due to DNS pollution.
 So write a script to deal with DNS issues.
-Written in python3, it can resolve the domain name *.surfshark.com to the correct ip to solve the connection problem.
+Written in python3, it can resolve the domain name *.surfshark.com to the correct ip to solve the connection question.
