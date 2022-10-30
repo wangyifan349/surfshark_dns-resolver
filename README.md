@@ -15,3 +15,9 @@ my.sharkchinaz.com
 my.shark-in-china.com
 my.shark-in-chinaz.com
 my.sharky-china.com
+
+
+最近发现了一种新的方法可以解决surfshark的dns污染问题,由于surfshark的更换ip地址非常频繁(最佳观察每个地区1天2次以上),所以几乎不存在被墙的可能性。
+sudo echo -e "[Resolve]\nDNS=1.1.1.1\nDNSOverTLS=yes">/etc/systemd/resolved.conf
+sudo systemctl restart systemd-resolved
+sudo systemctl restart NetworkManager
