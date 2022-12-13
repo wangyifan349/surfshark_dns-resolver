@@ -7,7 +7,7 @@ surfshark is a good VPN, but cannot resolve and connect properly in China due to
 So write a script to deal with DNS issues.
 Written in python3, it can resolve the domain name *.surfshark.com to the correct ip to solve the connection question.
 
-
+in  China,you can use this url:
 my.surfshark.com
 my.shark-china.com
 my.shark-chinaz.com
@@ -21,3 +21,12 @@ my.sharky-china.com
 sudo echo -e "[Resolve]\nDNS=1.1.1.1\nDNSOverTLS=yes">/etc/systemd/resolved.conf
 sudo systemctl restart systemd-resolved
 sudo systemctl restart NetworkManager
+
+Recently, a new method was found to solve the DNS pollution problem of Surfshark. Since Surfshark changes its IP address very frequently (it is best to observe each region more than twice a day), there is almost no possibility of being blocked.
+on ubuntu ,you can use  tls over dns
+Enter the following in the command line window
+sudo echo -e "[Resolve]\nDNS=1.1.1.1\nDNSOverTLS=yes">/etc/systemd/resolved.conf
+sudo systemctl restart systemd-resolved
+sudo systemctl restart NetworkManager
+dns over tls can solve the problem of dns pollution
+
