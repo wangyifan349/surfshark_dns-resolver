@@ -55,4 +55,6 @@ sudo systemctl restart NetworkManager
 
 dns over tls can solve the problem of dns pollution
 
+In addition, you can buy a domain name and use the cname to point to the surfshark domain name to solve the pollution problem.
+
 
