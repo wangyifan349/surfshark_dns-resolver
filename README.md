@@ -57,4 +57,8 @@ dns over tls can solve the problem of dns pollution
 
 In addition, you can buy a domain name and use the cname to point to the surfshark domain name to solve the pollution problem.
 
+你需要找一个kill-switch脚本或者利用防火墙实现kill-switch。
+
+注意，这种方法只能保证在debian等开源安全的系统保持隐私，在Windows下保持不了哦，Windows的遥感太多了。
+
 
