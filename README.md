@@ -35,6 +35,11 @@ my.sharky-china.com
 
 sudo echo -e "[Resolve]\nDNS=1.1.1.1\nDNSOverTLS=yes">/etc/systemd/resolved.conf
 
+或者
+
+sudo sh -c 'echo -e "[Resolve]\nDNS=1.1.1.1 2606:4700:4700::1111\nFallbackDNS=1.0.0.1 2606:4700:4700::1001\nDNSOverTLS=yes" > /etc/systemd/resolved.conf'
+
+
 sudo systemctl restart systemd-resolved
 
 sudo systemctl restart NetworkManager
@@ -53,6 +58,9 @@ on ubuntu ,you can use  tls over dns
 Enter the following in the command line window
 
 sudo echo -e "[Resolve]\nDNS=1.1.1.1\nDNSOverTLS=yes">/etc/systemd/resolved.conf
+
+or   sudo sh -c 'echo -e "[Resolve]\nDNS=1.1.1.1 2606:4700:4700::1111\nFallbackDNS=1.0.0.1 2606:4700:4700::1001\nDNSOverTLS=yes" > /etc/systemd/resolved.conf'
+
 
 sudo systemctl restart systemd-resolved
 
