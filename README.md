@@ -39,6 +39,11 @@ sudo systemctl restart systemd-resolved
 
 sudo systemctl restart NetworkManager
 
+sudo ufw allow out to 1.1.1.1 port 853 proto tcp
+
+sudo ufw allow out to 1.1.1.1 port 443 proto tcp
+
+ufw allow ssh
 
 Recently, a new method was found to solve the DNS pollution problem of Surfshark. Since Surfshark changes its IP address very frequently (it is best to observe each region more than twice a day), there is almost no possibility of being blocked.
 
