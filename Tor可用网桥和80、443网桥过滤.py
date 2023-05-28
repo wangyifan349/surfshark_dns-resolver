@@ -65,8 +65,18 @@ pool.shutdown(wait=True)
 sorted_available_bridges = sorted(available_bridges, key=extract_port)
 
 # 将端口号为 443 或 80 的洋葱网桥移到列表前面
-sorted_available_bridges = [bridge for bridge in sorted_available_bridges if ':443' in bridge or ':80' in bridge] + \
-                           [bridge for bridge in sorted_available_bridges if ':443' not in bridge and ':80' not in bridge]
+port_80_443_bridges = []  # 存储端口号为 443 或 80 的洋葱网桥
+other_bridges = []  # 存储其他洋葱网桥
+
+# 根据端口号分离洋葱网桥
+for bridge in sorted_available_bridges:
+    if ":443" in bridge or ":80" in bridge:
+        port_80_443_bridges.append(bridge)
+    else:
+        other_bridges.append(bridge)
+
+sorted_available_bridges = port_80_443_bridges + other_bridges# 将端口号为 443 或 80 的洋葱网桥放在列表前面，然后是其他洋葱网桥
+
 
 # 将可用和不可用的洋葱网桥按照分界线组合成一个新的列表
 sorted_bridges = sorted_available_bridges + ['--------------'] + unavailable_bridges
