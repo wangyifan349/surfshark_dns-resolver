@@ -91,7 +91,12 @@ domains = [
     "no-osl.prod.surfshark.com",
     "kr-seo.prod.surfshark.com",
     "my-kul.prod.surfshark.com",
-    "kh-pnh.prod.surfshark.com"
+    "kh-pnh.prod.surfshark.com",
+    "ux.surfshark.com",
+    "in.appcenter.ms",
+    "cdn.ss-cdn.com",
+    "download.surfshark.com",
+    "in.appcenter.ms"
 ]
 
 unique_domains = set(domains)
