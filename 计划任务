@@ -1,0 +1,27 @@
+#!/bin/bash
+sudo -v
+if [ $? -ne 0 ]; then
+    echo "无法获取sudo权限，本无法继续执行。"
+    exit 1
+fi
+cat << EOF > /home/wangyifan/下载/script.sh
+nohup /home/wangyifan/下载/xray  -c  config.json >/dev/null 2>&1&
+echo -e "[Resolve]\nDNS=1.1.1.1\nDNSOverTLS=yes">/etc/systemd/resolved.conf
+systemctl restart systemd-resolved
+EOF
+
+cat << EOF > /etc/systemd/system/myscript.service
+[Unit]
+Description=My Script
+After=network.target
+
+[Service]
+ExecStart=/home/wangyifan/下载/script.sh
+
+[Install]
+WantedBy=default.target
+EOF
+systemctl daemon-reload
+systemctl enable myscript.service
+#脚本仅执行一次即可，创建一个计划任务每次开机确保dns是加密的。并且开启xray翻墙。
+
