@@ -59,8 +59,6 @@ def replace_domains_with_ips(content):
 
 # 主函数
 def main():
-# 主函数
-def main():
     target_directory = "/home/wangyifan/下载/openvpn"  # 请替换为您的目标目录
 
     if os.path.isdir(target_directory):
