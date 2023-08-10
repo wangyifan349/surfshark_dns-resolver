@@ -59,4 +59,4 @@ In addition, you can buy a domain name and use the cname to point to the surfsha
 
 你需要找一个kill-switch脚本或者利用防火墙实现kill-switch，最好kill-switch脚本在kill-switch之后自动连接ovpn文件，去让chatgpt给你写吧。
 
-另外surfshark的vpn经常被阻断，可以考虑使用普通的机场，几块钱的即可，然后接入洋葱网络，再开一个v2ray我们称之为代理2吧，(注意使用另外的代理端口)，这个连接socket5到洋葱的端口上，最后系统设置代理2的v2ray代理，加入广告屏蔽规则。洋葱虽然匿名性非常好很好，但是严重牺牲速度。我已经就好多机场记录啦，不要相信没有记录这种鬼话。
+另外surfshark的vpn经常被阻断，可以考虑使用普通的机场，几块钱的即可，然后接入洋葱网络，再开一个v2ray我们称之为代理2吧，(注意使用另外的代理端口)，这个连接socket5到洋葱的端口上，最后系统设置代理2的v2ray代理，加入广告屏蔽规则。洋葱虽然匿名性非常好很好，但是严重牺牲速度。我已经在网上看到过好多机场记录啦，不要相信没有记录这种鬼话。
