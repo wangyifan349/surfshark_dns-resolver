@@ -72,6 +72,4 @@ In addition, you can buy a domain name and use the cname to point to the surfsha
 
 你需要找一个kill-switch脚本或者利用防火墙实现kill-switch。
 
-注意，这种方法只能保证在debian等开源安全的系统保持隐私，在Windows下保持不了哦，Windows的遥感太多了。
-
-
+另外surfshark真的不适合在中国使用，他们的vpn几乎没有可以在中国使用的，不如自己去买一个VPS，搭建xray、trojan还可以利用CDN绕过防火墙成功率百分百。
